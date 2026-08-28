@@ -112,10 +112,14 @@ a{color:var(--brand);text-decoration:none}
 
 /* Responsive */
 @media(max-width:900px){
-  .hero-inner{flex-direction:column-reverse}
-  .hero-image-wrap{text-align:center}
-  .hero-image{max-width:320px;width:80%}
+  .hero-inner{flex-direction:column-reverse;align-items:center}
+  .hero-image-wrap{text-align:center;width:100%}
+  .hero-image{max-width:360px;width:78%}
+  .hero-content{width:100%;text-align:center}
   .contact-grid{grid-template-columns:1fr}
+  .container{padding:18px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .social-row{justify-content:flex-start}
 }
 
 @media(max-width:700px){
@@ -124,4 +128,22 @@ a{color:var(--brand);text-decoration:none}
   .main-nav.open ul{display:flex;flex-direction:column;position:absolute;right:0;top:56px;background:var(--bg);padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(11,23,36,0.08)}
   .header-cta{display:none}
   .logo-link{font-size:22px}
+  .logo-img{height:1.1em}
+  .hero-image{max-width:320px;width:88%}
+  .contact-cards{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+}
+
+/* Make embedded map responsive and limit height on small screens */
+.map-wrap iframe{width:100%;height:320px;max-width:100%;border-radius:8px}
+@media(max-width:700px){.map-wrap iframe{height:240px}}
+
+/* Improve touch targets and spacing on small devices */
+@media(max-width:480px){
+  .hero{padding:36px 0}
+  .logo-link{gap:8px}
+  .logo-text{font-size:18px}
+  .header-inner{padding:6px 0}
+  .btn{padding:8px 12px}
+  .contact-cards{gap:12px}
 }
